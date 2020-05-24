@@ -1,4 +1,4 @@
-export default interface IBeer {
+export default interface IContact {
   _id: string
   fName: string
   lName: string
