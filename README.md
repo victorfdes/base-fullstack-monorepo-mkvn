@@ -1,6 +1,4 @@
 # What is this?
-I've often found myself spending a significant amount of time setting up the initial boilerplate for a full-stack application. This repository aims to reduce that time.
-
 This is a starter Typescript based full-stack setup that uses Vue for the UI, Koa for backend, and Mongo as a database. The stack is based on personal preference. It is modular so that individual frameworks can be swapped out for another based on the project requirement.
 
 # Why a Monorepo
@@ -12,4 +10,36 @@ Here is a more interesting read on this topic if you are interested: [Advantages
 The packages directory contains all individual packages. Feel free to swap the code with the framework of your choice. There may be some additional configuration steps to be made in the docker files and start scripts based on what has been added.
 
 # Getting Started
-Coming Soon
+
+## Using Docker for mongo
+
+**Create a volume**
+
+```
+docker volume create mongodbdata
+```
+
+**Run the database**
+
+```
+docker run -p 27017:27017 -v mongodbdata:/data/db mongo
+```
+
+## Starting UI
+
+Being a standard Vue CLI based project
+
+- Navigate to /packages/web/web
+
+- Install Dependencies
+```
+yarn
+OR
+npm i
+```
+- Start dev server
+```
+yarn serve
+OR
+npm run serve
+```
