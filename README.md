@@ -29,7 +29,7 @@ docker run -p 27017:27017 -v mongodbdata:/data/db mongo
 
 Being a standard Vue CLI based project
 
-- Navigate to /packages/web/web
+- Navigate to /packages/web/
 
 - Install Dependencies
 ```
